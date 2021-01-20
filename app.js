@@ -1,7 +1,7 @@
 // Require related modules
 const express = require('express')
 const exphbs = require('express-handlebars')
-
+const generatePhrase = require('./generate_phrase')
 const app = express()
 const port = 3000
 
@@ -18,8 +18,8 @@ app.get('/', (req, res) => {
 })
 
 app.post('/', (req, res) => {
-  console.log(req.body)
-  res.render('index')
+  const phrase = generatePhrase(req.body)
+  res.render('index', { phrase })
 })
 
 // Start and listen on the server

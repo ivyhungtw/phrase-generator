@@ -14,8 +14,8 @@
             <div class="card-body">
               <div class="card-body d-flex justify-content-center">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="engineer" id="flexRadioDefault2">
-                  <label class="form-check-label" for="flexRadioDefault2">
+                  <input class="form-check-input" type="radio" name="job" id="flexRadioDefault1" value="engineer">
+                  <label class="form-check-label" for="flexRadioDefault1">
                     工程師
                   </label>
                 </div>
@@ -29,7 +29,7 @@
             <div class="card-body">
               <div class="card-body d-flex justify-content-center">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="designer" id="flexRadioDefault2" checked>
+                  <input class="form-check-input" type="radio" name="job" id="flexRadioDefault2" value="designer" checked>
                   <label class="form-check-label" for="flexRadioDefault2">
                     設計師
                   </label>
@@ -44,8 +44,8 @@
             <div class="card-body">
               <div class="card-body d-flex justify-content-center">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="entrepreneur" id="flexRadioDefault2">
-                  <label class="form-check-label" for="flexRadioDefault2">
+                  <input class="form-check-input" type="radio" name="job" id="flexRadioDefault3" value="entrepreneur">
+                  <label class="form-check-label" for="flexRadioDefault3">
                     創業家
                   </label>
                 </div>
@@ -60,8 +60,9 @@
         <div class="col-md-2">
           <button class="btn btn-success" type="submit">產生幹話</button>
         </div>
+        {{!-- Phrase --}}
         <div class="col-md-10">
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          <input class="form-control" id="floatingInputInvalid" value="{{phrase}}">
         </div>
       </div>
     </form>
