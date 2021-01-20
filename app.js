@@ -17,6 +17,11 @@ app.get('/', (req, res) => {
   res.render('index')
 })
 
+app.post('/', (req, res) => {
+  console.log(req.body)
+  res.render('index')
+})
+
 // Start and listen on the server
 app.listen(port, () => {
   console.log(`Listening on the Express server http://localhost:${port}`)
