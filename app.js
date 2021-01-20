@@ -14,7 +14,7 @@ app.use(express.urlencoded({ extended: true }))
 
 // Set up routes
 app.get('/', (req, res) => {
-  res.send('Hi')
+  res.render('index')
 })
 
 // Start and listen on the server

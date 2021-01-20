@@ -1,0 +1,66 @@
+<div class="container" style="max-width: 1200px;">
+    {{!-- Title --}}
+    <div class="row my-5">
+      <div class="col d-flex justify-content-center">
+        <h1>你想對誰說幹話？</h1>
+      </div>
+    </div>
+    {{!-- Cards --}}
+    <div class="row row-cols-1 row-cols-md-3 g-4 mb-3">
+      <div class="col">
+        <div class="card h-100" style="border: none;">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" class="card-img-top" alt="工程師" style="height: 18rem">
+          <div class="card-body">
+            <div class="card-body d-flex justify-content-center">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                  工程師
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100" style="border: none;">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" class="card-img-top" alt="設計師" style="height: 18rem">
+          <div class="card-body">
+            <div class="card-body d-flex justify-content-center">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                <label class="form-check-label" for="flexRadioDefault2">
+                  設計師
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card h-100" style="border: none;">
+          <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" class="card-img-top" alt="創業家" style="height: 18rem">
+          <div class="card-body">
+            <div class="card-body d-flex justify-content-center">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2">
+                <label class="form-check-label" for="flexRadioDefault2">
+                  創業家
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="row">
+      {{!-- Button --}}
+      <div class="col-md-2">
+        <button type="button" class="btn btn-success">產生幹話</button>
+      </div>
+      <div class="col-md-10">
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+    </div>
+  </div>
