@@ -20,7 +20,7 @@ app.get('/', (req, res) => {
 
 app.post('/', (req, res) => {
   const phrase = generatePhrase(req.body)
-  res.render('index', { phrase })
+  res.render('index', { phrase, jobs: jobList.results })
 })
 
 // Start and listen on the server
