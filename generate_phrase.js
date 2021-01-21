@@ -1,8 +1,9 @@
 function generatePhrase(data) {
+  // Handle error
+  if (!data.job) return 'Please select a job title.'
   // Define variables
   const jobList = require('./jobs.json').results
   const job = jobList.find(el => el.job === data.job)
-  console.log(job)
   const phrases = ['很簡單', '很容易', '很快', '很正常']
 
   // Find the target
