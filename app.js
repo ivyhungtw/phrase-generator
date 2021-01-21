@@ -2,6 +2,7 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
 const generatePhrase = require('./generate_phrase')
+const jobList = require('./jobs.json')
 const app = express()
 const port = 3000
 
@@ -14,7 +15,7 @@ app.use(express.urlencoded({ extended: true }))
 
 // Set up routes
 app.get('/', (req, res) => {
-  res.render('index')
+  res.render('index', { jobs: jobList.results })
 })
 
 app.post('/', (req, res) => {

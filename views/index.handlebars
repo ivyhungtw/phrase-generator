@@ -5,55 +5,27 @@
         <h1>你想對誰說幹話？</h1>
       </div>
     </div>
-    {{!-- Cards --}}
+    
     <form method="POST" action="/">
       <div class="row row-cols-1 row-cols-md-3 g-4 mb-3">
+        {{!-- Render Jobs --}}
+        {{#each jobs}}
         <div class="col">
           <div class="card h-100" style="border: none;">
-            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" class="card-img-top" alt="工程師" style="height: 18rem">
+            <img src="{{this.image}}" class="card-img-top" alt="{{this.title}}" style="height: 18rem">
             <div class="card-body">
               <div class="card-body d-flex justify-content-center">
                 <div class="form-check">
-                  <input class="form-check-input" type="radio" name="job" id="flexRadioDefault1" value="engineer">
-                  <label class="form-check-label" for="flexRadioDefault1">
-                    工程師
+                  <input class="form-check-input" type="radio" name="job" id="{{this.job}}" value="{{this.job}}">
+                  <label class="form-check-label" for="{{this.job}}">
+                    {{this.title}}
                   </label>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col">
-          <div class="card h-100" style="border: none;">
-            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" class="card-img-top" alt="設計師" style="height: 18rem">
-            <div class="card-body">
-              <div class="card-body d-flex justify-content-center">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="job" id="flexRadioDefault2" value="designer" checked>
-                  <label class="form-check-label" for="flexRadioDefault2">
-                    設計師
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card h-100" style="border: none;">
-            <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" class="card-img-top" alt="創業家" style="height: 18rem">
-            <div class="card-body">
-              <div class="card-body d-flex justify-content-center">
-                <div class="form-check">
-                  <input class="form-check-input" type="radio" name="job" id="flexRadioDefault3" value="entrepreneur">
-                  <label class="form-check-label" for="flexRadioDefault3">
-                    創業家
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+        {{/each}}
       </div>
       <div class="row justify-content-center">
         {{!-- Button --}}
