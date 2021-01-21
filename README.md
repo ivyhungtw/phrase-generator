@@ -35,6 +35,6 @@ npm run dev
 
 ## 環境建置
 
-- Node.js v12.15.1 -執行環境
+- Node.js v14.15.1 -執行環境
 - Express V4.17.1 -框架
 - Express-handlebars V5.2.0 -模板引擎
